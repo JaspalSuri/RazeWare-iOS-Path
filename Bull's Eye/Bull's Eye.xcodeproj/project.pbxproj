@@ -22,6 +22,7 @@
 		F862A5902217E6B900A822A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F862A5932217E6B900A822A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F862A5952217E6B900A822A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F862A59B2217E95000A822A2 /* Features List.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Features List.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				F862A5902217E6B900A822A2 /* Assets.xcassets */,
 				F862A5922217E6B900A822A2 /* LaunchScreen.storyboard */,
 				F862A5952217E6B900A822A2 /* Info.plist */,
+				F862A59B2217E95000A822A2 /* Features List.md */,
 			);
 			path = "Bull's Eye";
 			sourceTree = "<group>";
