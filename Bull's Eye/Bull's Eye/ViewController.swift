@@ -27,13 +27,20 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         
+        var difference: Int
+        if currentValue > targetValue {
+            difference = currentValue - targetValue
+        } else {
+            difference = targetValue - currentValue
+        }
+        
         let passFail = (currentValue == targetValue ? "Congratulations!" : "Try again!")
         
         let alertMessage =
         """
-        The value of the slider is now: \(currentValue)
+        The value of the slider was: \(currentValue)
         The target value was: \(targetValue)
-        \(passFail)
+        \(passFail) The difference was: \(difference)
         """
         
         let alert = UIAlertController(title: "Hello, World!", message: alertMessage, preferredStyle: .alert)
