@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var currentValue: Int = 0
+    var currentValue: Int = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
-//        print("The value of the slider is now: \(slider.value)")
         let roundedValue = slider.value.rounded()
-//        print("The value of the slider is now: \(roundedValue)")
         currentValue = Int(slider.value)
     }
     
