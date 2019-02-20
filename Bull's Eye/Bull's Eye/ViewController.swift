@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     // Starting value
-    var currentValue: Int = 0
+    var currentValue = 0
     // Targe value for the user/player
-    var targetValue: Int = 0
+    var targetValue = 0
+    // Player's score
+    var score = 0
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var targetValueLabel: UILabel!
@@ -29,6 +31,8 @@ class ViewController: UIViewController {
         
         let difference = abs(currentValue - targetValue)
         let points = 100 - difference
+        
+        score += points
         
         let alertMessage = "You scored \(points) points!"
         
