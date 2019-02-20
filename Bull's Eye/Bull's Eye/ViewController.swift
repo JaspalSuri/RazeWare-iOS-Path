@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var targetValueLabel: UILabel!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let roundedValue = slider.value.rounded()
@@ -64,6 +66,7 @@ class ViewController: UIViewController {
     
     func updateLabels() {
         targetValueLabel.text = String(targetValue)
+        scoreLabel.text = String(score)
     }
     
 }
