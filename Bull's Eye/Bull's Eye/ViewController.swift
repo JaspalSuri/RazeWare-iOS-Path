@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var targetValue: Int = 0
     
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var targetValueLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         let alertMessage =
         """
         The value of the slider is now: \(currentValue)
-        The target value is: \(targetValue)
+        The target value was: \(targetValue)
         """
         
         let alert = UIAlertController(title: "Hello, World!", message: alertMessage, preferredStyle: .alert)
@@ -55,6 +56,11 @@ class ViewController: UIViewController {
         currentValue = 50
         // Reset slider thumb position
         slider.value = Float(currentValue)
+        updateLabels()
+    }
+    
+    func updateLabels() {
+        targetValueLabel.text = String(targetValue)
     }
     
 }
