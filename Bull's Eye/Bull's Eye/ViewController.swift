@@ -27,10 +27,13 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         
+        let passFail = (currentValue == targetValue ? "Congratulations!" : "Try again!")
+        
         let alertMessage =
         """
         The value of the slider is now: \(currentValue)
         The target value was: \(targetValue)
+        \(passFail)
         """
         
         let alert = UIAlertController(title: "Hello, World!", message: alertMessage, preferredStyle: .alert)
