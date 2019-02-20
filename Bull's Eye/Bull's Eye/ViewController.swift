@@ -27,12 +27,8 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         
-        var difference: Int
-        if currentValue > targetValue {
-            difference = currentValue - targetValue
-        } else {
-            difference = targetValue - currentValue
-        }
+        var difference = currentValue - targetValue
+        difference = (difference < 0 ? -difference : difference)
         
         let passFail = (currentValue == targetValue ? "Congratulations!" : "Try again!")
         
