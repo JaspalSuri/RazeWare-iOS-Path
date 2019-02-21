@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             title = "Not even close..."
         }
         
-        let alertMessage = "You scored \(points) points! You were \(difference) off."
+        let alertMessage = "You scored \(points) points! \nYou were \(difference) off from \(targetValue)."
         
         let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -89,6 +89,17 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(roundNumber)
+    }
+    
+    
+    @IBAction func startOverButton(_ sender: Any) {
+        startNewRound()
+        let resetValue = 0
+        roundNumber = resetValue
+        roundLabel.text = "\(resetValue)"
+        score = resetValue
+        scoreLabel.text = "\(resetValue)"
+        slider.value = Float(50)
     }
     
 }

@@ -79,6 +79,9 @@
                                 <rect key="frame" x="66" y="243" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="startOverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcV-VQ-Bl2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-aa-4rk">
                                 <rect key="frame" x="455" y="246" width="22" height="22"/>
