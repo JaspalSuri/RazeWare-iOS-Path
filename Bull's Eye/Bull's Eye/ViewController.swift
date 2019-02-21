@@ -40,9 +40,21 @@ class ViewController: UIViewController {
         
         score += points
         
+        let title: String
+        switch difference {
+        case 0:
+            title = "Perfect!"
+        case 1...5:
+            title = "You almost had it!"
+        case 6...10:
+            title = "Pretty good!"
+        default:
+            title = "Not even close..."
+        }
+        
         let alertMessage = "You scored \(points) points!"
         
-        let alert = UIAlertController(title: "Hello, World!", message: alertMessage, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         // Adds the button to the alert
         alert.addAction(action)
