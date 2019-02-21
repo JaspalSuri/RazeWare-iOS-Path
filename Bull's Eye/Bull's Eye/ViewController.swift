@@ -16,17 +16,21 @@ class ViewController: UIViewController {
     var targetValue = 0
     // Player's score
     var score = 0
+    // Round number
+    var roundNumber = 0
     
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var targetValueLabel: UILabel!
-    
+    @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var roundLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let roundedValue = slider.value.rounded()
         currentValue = Int(roundedValue)
         startNewRound()
+//        roundLabel.text = String(roundNumber)
     }
 
     @IBAction func showAlert() {
@@ -56,17 +60,18 @@ class ViewController: UIViewController {
     
     func startNewRound() {
         targetValue = Int.random(in: 1...100)
-        
         // Override the value set in the main storyboard
         currentValue = 50
         // Reset slider thumb position
         slider.value = Float(currentValue)
+        roundNumber += 1
         updateLabels()
     }
     
     func updateLabels() {
-        targetValueLabel.text = String(targetValue)
+        targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
+        roundLabel.text = String(roundNumber)
     }
     
 }
