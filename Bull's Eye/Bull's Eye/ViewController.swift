@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     var score = 0
     // Round number
     var roundNumber = 0
-    // Bonus Points
-    var bonusPoints = 0
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var targetLabel: UILabel!
@@ -39,29 +37,27 @@ class ViewController: UIViewController {
         
         let difference = abs(currentValue - targetValue)
         
-        if difference == 0 {
-            bonusPoints = 100
-        } else if difference == 1 {
-            bonusPoints = 50
-        }
-        
-        let points = 100 - difference + bonusPoints
+        var points = 100 - difference
         
         score += points
         
         let title: String
-        switch difference {
-        case 0:
+        
+        if difference == 0 {
             title = "Perfect!"
-        case 1...5:
+            points += 50
+        } else if difference < 5 {
             title = "You almost had it!"
-        case 6...10:
+            if difference == 1 {
+                points += 50
+            }
+        } else if difference < 10 {
             title = "Pretty good!"
-        default:
+        } else {
             title = "Not even close..."
         }
         
-        let alertMessage = "You scored \(points) points!"
+        let alertMessage = "You scored \(points) points! You were \(difference) off."
         
         let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
