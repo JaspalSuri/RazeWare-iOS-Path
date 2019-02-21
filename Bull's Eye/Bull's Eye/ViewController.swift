@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         if difference == 0 {
             title = "Perfect!"
-            points += 50
+            points += 100
         } else if difference < 5 {
             title = "You almost had it!"
             if difference == 1 {
