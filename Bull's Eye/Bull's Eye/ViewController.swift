@@ -29,8 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let roundedValue = slider.value.rounded()
         currentValue = Int(roundedValue)
-        startNewRound()
-//        roundLabel.text = String(roundNumber)
+        startNewGame()
     }
 
     @IBAction func showAlert() {
@@ -97,14 +96,10 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func startOverButton(_ sender: Any) {
+    @IBAction func startNewGame() {
         startNewRound()
-        let resetValue = 0
-        roundNumber = resetValue
-        roundLabel.text = "\(resetValue)"
-        score = resetValue
-        scoreLabel.text = "\(resetValue)"
-        slider.value = Float(50)
+        roundNumber = 0
+        score = 0
     }
     
 }
