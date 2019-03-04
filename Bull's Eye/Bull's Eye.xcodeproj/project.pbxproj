@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F820340A222DE91100A69240 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8203409222DE91100A69240 /* AboutViewController.swift */; };
 		F862A58A2217E6B800A822A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862A5892217E6B800A822A2 /* AppDelegate.swift */; };
 		F862A58C2217E6B800A822A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862A58B2217E6B800A822A2 /* ViewController.swift */; };
 		F862A58F2217E6B800A822A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F862A58D2217E6B800A822A2 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8203409222DE91100A69240 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F862A5862217E6B800A822A2 /* Bull's Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull's Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F862A5892217E6B800A822A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F862A58B2217E6B800A822A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +38,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F820340B222DECF300A69240 /* Unmodified Files */ = {
+			isa = PBXGroup;
+			children = (
+				F862A5892217E6B800A822A2 /* AppDelegate.swift */,
+				F862A5902217E6B900A822A2 /* Assets.xcassets */,
+				F862A5922217E6B900A822A2 /* LaunchScreen.storyboard */,
+				F862A5952217E6B900A822A2 /* Info.plist */,
+				F862A59B2217E95000A822A2 /* Features List.md */,
+			);
+			path = "Unmodified Files";
+			sourceTree = "<group>";
+		};
+		F820340C222DED0200A69240 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F862A58B2217E6B800A822A2 /* ViewController.swift */,
+				F8203409222DE91100A69240 /* AboutViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		F862A57D2217E6B800A822A2 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +78,9 @@
 		F862A5882217E6B800A822A2 /* Bull's Eye */ = {
 			isa = PBXGroup;
 			children = (
-				F862A5892217E6B800A822A2 /* AppDelegate.swift */,
-				F862A58B2217E6B800A822A2 /* ViewController.swift */,
+				F820340B222DECF300A69240 /* Unmodified Files */,
+				F820340C222DED0200A69240 /* View Controllers */,
 				F862A58D2217E6B800A822A2 /* Main.storyboard */,
-				F862A5902217E6B900A822A2 /* Assets.xcassets */,
-				F862A5922217E6B900A822A2 /* LaunchScreen.storyboard */,
-				F862A5952217E6B900A822A2 /* Info.plist */,
-				F862A59B2217E95000A822A2 /* Features List.md */,
 			);
 			path = "Bull's Eye";
 			sourceTree = "<group>";
@@ -137,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F820340A222DE91100A69240 /* AboutViewController.swift in Sources */,
 				F862A58C2217E6B800A822A2 /* ViewController.swift in Sources */,
 				F862A58A2217E6B800A822A2 /* AppDelegate.swift in Sources */,
 			);
@@ -286,7 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y6994DAGM;
-				INFOPLIST_FILE = "Bull's Eye/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Bull's Eye/Unmodified Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y6994DAGM;
-				INFOPLIST_FILE = "Bull's Eye/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Bull's Eye/Unmodified Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
