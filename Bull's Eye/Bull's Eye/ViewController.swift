@@ -60,13 +60,18 @@ class ViewController: UIViewController {
         let alertMessage = "You scored \(points) points! \nYou were \(difference) off from \(targetValue)."
         
         let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        // Insert a (completion) closure in the handler
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            action in
+            self.startNewRound()
+        })
         // Adds the button to the alert
         alert.addAction(action)
         
+        // On iOS the alert is presented and then the next line
+        // is executed before the user interacts with it.
         present(alert, animated: true, completion: nil)
-        
-        startNewRound()
         
     }
     
