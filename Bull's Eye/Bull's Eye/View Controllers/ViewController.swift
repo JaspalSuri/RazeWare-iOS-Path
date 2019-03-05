@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         currentValue = Int(roundedValue)
         startNewGame()
         sliderTrack()
-
     }
     
     func sliderTrack() {
@@ -120,7 +119,6 @@ class ViewController: UIViewController {
         roundNumber = 0
         score = 0
         startNewRound()
-
     }
     
 }
