@@ -30,7 +30,11 @@ class ViewController: UIViewController {
         let roundedValue = slider.value.rounded()
         currentValue = Int(roundedValue)
         startNewGame()
-        
+        sliderTrack()
+
+    }
+    
+    func sliderTrack() {
         let thumbImageNormal = #imageLiteral(resourceName: "SliderThumb-Normal")
         slider.setThumbImage(thumbImageNormal, for: .normal)
         
@@ -46,9 +50,6 @@ class ViewController: UIViewController {
         let trackRightImage = #imageLiteral(resourceName: "SliderTrackRight")
         let trackRightImageResizable = trackRightImage.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightImageResizable, for: .normal)
-        
-    
-        
     }
 
     @IBAction func showAlert() {
