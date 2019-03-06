@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bull_s_Eye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="YXS-Gt-Djl">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcW-Vp-xXm">
-                                <rect key="frame" x="23" y="16.5" width="522" height="287"/>
+                                <rect key="frame" x="72.5" y="44" width="522" height="287"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="el4-fE-5Gb">
                                         <rect key="frame" x="35" y="79" width="436" height="30"/>
@@ -168,16 +168,14 @@
             <objects>
                 <viewController id="R0V-0V-ix8" customClass="AboutViewController" customModule="Bull_s_Eye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cRX-Bl-DaK">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="22H-d3-Z1y">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="22H-d3-Z1y">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-Hh-k62">
-                                <rect key="frame" x="231" y="263" width="100" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-Hh-k62">
+                                <rect key="frame" x="283.5" y="318" width="100" height="37"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -192,22 +190,20 @@
                                     <action selector="close" destination="R0V-0V-ix8" eventType="touchUpInside" id="NzR-YO-xMu"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C83-km-scZ">
-                                <rect key="frame" x="20" y="20" width="523" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C83-km-scZ">
+                                <rect key="frame" x="20" y="20" width="627" height="278"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EH-87-2PA">
-                                <rect key="frame" x="164" y="218" width="240" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EH-87-2PA">
+                                <rect key="frame" x="498" y="318" width="149" height="37"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="About the Author's Cat" backgroundImage="Button-Normal">
+                                <state key="normal" title="About My Cat" backgroundImage="Button-Normal">
                                     <color key="titleColor" red="0.37647058823529411" green="0.11764705882352941" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -220,6 +216,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="22H-d3-Z1y" firstAttribute="top" secondItem="QGS-Rg-NO4" secondAttribute="top" id="8Uu-lO-C68"/>
+                            <constraint firstItem="QGS-Rg-NO4" firstAttribute="bottom" secondItem="PL4-Hh-k62" secondAttribute="bottom" constant="20" id="Dny-ZP-Kd5"/>
+                            <constraint firstItem="PL4-Hh-k62" firstAttribute="centerX" secondItem="cRX-Bl-DaK" secondAttribute="centerX" id="FQj-hP-YKD"/>
+                            <constraint firstItem="22H-d3-Z1y" firstAttribute="trailing" secondItem="QGS-Rg-NO4" secondAttribute="trailing" id="G2A-dd-zCS"/>
+                            <constraint firstItem="C83-km-scZ" firstAttribute="top" secondItem="QGS-Rg-NO4" secondAttribute="top" constant="20" id="Q4x-Be-5tJ"/>
+                            <constraint firstItem="C83-km-scZ" firstAttribute="leading" secondItem="QGS-Rg-NO4" secondAttribute="leading" constant="20" id="U9D-Yl-JKM"/>
+                            <constraint firstItem="22H-d3-Z1y" firstAttribute="bottom" secondItem="QGS-Rg-NO4" secondAttribute="bottom" id="WK0-NC-R1a"/>
+                            <constraint firstItem="QGS-Rg-NO4" firstAttribute="trailing" secondItem="C83-km-scZ" secondAttribute="trailing" constant="20" id="ebg-24-O7I"/>
+                            <constraint firstItem="QGS-Rg-NO4" firstAttribute="trailing" secondItem="4EH-87-2PA" secondAttribute="trailing" constant="20" id="gf4-8W-98j"/>
+                            <constraint firstItem="22H-d3-Z1y" firstAttribute="leading" secondItem="QGS-Rg-NO4" secondAttribute="leading" id="qCf-Sv-p2M"/>
+                            <constraint firstItem="PL4-Hh-k62" firstAttribute="top" secondItem="C83-km-scZ" secondAttribute="bottom" constant="20" id="wOf-q9-eEz"/>
+                            <constraint firstItem="QGS-Rg-NO4" firstAttribute="bottom" secondItem="4EH-87-2PA" secondAttribute="bottom" constant="20" id="xY0-6Z-WBF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QGS-Rg-NO4"/>
                     </view>
                     <connections>
@@ -235,7 +245,7 @@
             <objects>
                 <viewController id="Pia-al-ARP" customClass="AboutAuthorViewController" customModule="Bull_s_Eye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4f-fR-AXp">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Jrj-Hp-JWu">
