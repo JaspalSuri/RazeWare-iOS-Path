@@ -35,8 +35,6 @@
  
  Declare a constant tuple that contains three Int values followed by a String. Use this to represent a date (month, day, year) followed by an emoji or word you might associate with that day.
  */
-
-// TODO: Write solution here
 // constant tuple
 // three ints
 // and one string
@@ -44,25 +42,19 @@
 // with and emoji for that day
 // e.g. 04, 01, 2000, 😜
 
-let halloweenDate: (Int, Int, Int, String) = (10, 31, 2000, "🎃")
+let halloweenDay = (10, 31, 2000, "🎃")
 /*:
  Create another tuple, but this time name the constituent components. Give them names related to the data that they contain: month, day, year and emoji.
  */
-
-// TODO: Write solution here
-let thanksgivingDate: (Int, Int, Int, String) = (month: 11, day: 28, year: 1789, emoji: "🦃")
+let thanksgivingDay = (month: 11, day: 28, year: 1789, emoji: "🦃")
 /*:
  In one line, read the day and emoji values into two constants. You’ll need to employ the underscore to ignore the month and year.
  */
-
-// TODO: Write solution here
-let (_, dayTGD, _, emojiTGD) = thanksgivingDate
+let (_, dayTGD, _, emojiTGD) = thanksgivingDay
 dayTGD
 emojiTGD
 /*:
  Up until now, you’ve only seen constant tuples. But you can create variable tuples, too. Create one more tuple, like in the exercises above, but this time use var instead of let. Now change the emoji to a new value. */
-
-// TODO: Write solution here
-var christmasDate: (Int, Int, Int, String) = (month: 12, day: 25, year: 2000, emoji: "🎄")
-christmasDate = (emoji: "🎅")
-christmasDate
+var christmasDay = (month: 12, day: 25, year: 2000, emoji: "🎄")
+christmasDay.emoji = "🎅"
+christmasDay
