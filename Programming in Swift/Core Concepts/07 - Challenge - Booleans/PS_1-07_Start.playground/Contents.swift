@@ -40,7 +40,7 @@ let isTeenager = myAge >= 13 && myAge <= 19
  Create another constant called `leonardosAge` and set it to 14, the age of Leonardo in the 1984 Teenage Mutant Ninja Turtles comic. Then, create a constant called `eitherAreTeenagers` that uses Boolean logic to determine if either you or Leonardo are teenagers.
  */
 let leonardosAge = 14
-let eitherAreTeenagers = myAge >= 13 && myAge <= 19 || leonardosAge >= 13 && leonardosAge <= 19
+let eitherAreTeenagers = isTeenager || (leonardosAge >= 13 && leonardosAge <= 19)
 /*:
  Create a constant called student and set it to your name as a string. Create a constant called author and set it to "Matt Galloway", the original author of these exercises. Create a constant called `authorIsStudent` that uses string equality to determine if student and author are equal.
  */
@@ -54,7 +54,7 @@ let studentBeforeAuthor = student <= author
  ### IF STATEMENTS AND BOOLEANS
  You've already created a constant called "myAge" and checked to see if you are a teenager. Using that information, write an if statement to print out "Teenager" if you're a teenager, and "Not a teenager" if you're not.
  */
-if myAge >= 13 && myAge <= 19 {
+if isTeenager {
     print("Teenager")
 } else {
     print("Not a teenager")
@@ -62,4 +62,5 @@ if myAge >= 13 && myAge <= 19 {
 /*:
  Create a constant called `answer` and use a ternary conditional operator to check if you are *not* a teenager and set it equal the same strings you printed in the above exercise. Then print out answer.
  */
-let answer = myAge >= 13 && myAge <= 19 ? "Teenager" : "Not a teenager"
+let answer = !isTeenager ? "Not a teenager" : "Teenager"
+print(answer)
