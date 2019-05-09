@@ -71,7 +71,4 @@ repeat {
     roll = Int.random(in: 1...6)
     count += 1
     print("(3) After \(count) rolls, roll is \(roll)")
-    if count > 5 {
-        break
-    }
-} while roll != 6
+} while roll != 6 && count < 5
