@@ -43,6 +43,8 @@ let age = 30
 var lifeStage: String
 
 switch age {
+case ..<0:
+    lifeStage = "Not born yet"
 case 0...2:
     lifeStage = "Infant"
 case 3...12:
@@ -53,13 +55,11 @@ case 20...39:
     lifeStage = "Middle aged"
 case 40...60:
     lifeStage = "Middle aged"
-case age where age >= 61:
+case 61...:
     lifeStage = "Elderly"
-default:
-    lifeStage = "N/A"
+case let age:
+    fatalError("Unaccounted for age: \(age)")
 }
-
-
 /*:
  Write a switch statement that takes a tuple containing a `String` and an `Int`.  The `String` is a name, and the `Int` is an age. Use the same cases that you used above, and binding with `let` syntax, to assign the the name, followed by the life stage, to a `String` constant. For example, for the author of these challenges, you'd assign "Matt is an adult." to your constant.
  */
@@ -83,4 +83,4 @@ default:
     lifeStage = "N/A"
 }
 
-let statment = "\(name) is (a(n)) \(lifeStage)"
+let statment = "\(name) is (a(n)) \(lifeStage)."
