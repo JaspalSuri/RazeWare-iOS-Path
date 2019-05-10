@@ -3,5 +3,6 @@
     <pages>
         <page name='While Loops'/>
         <page name='Ranges'/>
+        <page name='Switch Statements'/>
     </pages>
 </playground>
