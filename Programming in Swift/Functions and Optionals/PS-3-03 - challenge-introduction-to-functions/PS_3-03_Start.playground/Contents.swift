@@ -53,17 +53,15 @@ printFullName2("Jaspal", "Suri")
  Write a function named `calculateFullName` that returns the full name as a string. Use it to store your own full name in a constant.
  */
 func calculateFullName(_ firstName: String, _ lastName: String) -> String {
-    let fullName = firstName + " " + lastName
-    return fullName
+    return firstName + " " + lastName
 }
-calculateFullName("Jaspal", "Suri")
+let fullName = calculateFullName("Jaspal", "Suri")
 /*:
  Change `calculateFullName` to return a tuple containing both the full name and the length of the name. You can find a string’s length by using the `count` property. Use this function to determine the length of your own full name.
  */
-func calculateFullName2(_ firstName: String, _ lastName: String, _ nameLength: Int = 1) -> (String, Int) {
+func calculateFullNameWithLength(_ firstName: String, _ lastName: String) -> (name: String, length: Int) {
     let fullName = firstName + " " + lastName
-    let fullNameCount = fullName.count - 1
-    
-    return (fullName, fullNameCount)
+    return (fullName, fullName.count - 1)
 }
-calculateFullName2("Jaspal", "Suri")
+let (_, nameLength) = calculateFullNameWithLength("Jaspal", "Suri")
+print (nameLength)
