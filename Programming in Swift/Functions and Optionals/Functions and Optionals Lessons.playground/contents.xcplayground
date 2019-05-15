@@ -4,5 +4,6 @@
         <page name='More on Functions'/>
         <page name='Functions and Optionals'/>
         <page name='Optionals'/>
+        <page name='More Optionals'/>
     </pages>
 </playground>
