@@ -3,5 +3,6 @@
     <pages>
         <page name='Intro'/>
         <page name='Arrays'/>
+        <page name='Dictionaires'/>
     </pages>
 </playground>
