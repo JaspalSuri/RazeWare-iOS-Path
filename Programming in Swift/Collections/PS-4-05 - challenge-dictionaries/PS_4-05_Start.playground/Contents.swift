@@ -34,17 +34,26 @@
  
  Create a dictionary with the following keys: name, profession, country, state, and city. For the values, put your own name, profession, country, state, and city.
  */
-var personalInformation = ["name" : "Jaspal Suri", "profession" : "NA", "country" : "United States", "state" : "NA", "city" : "NA"]
+// changed for readability; it also makes entering in details easier
+var personalInformation = [
+    "name" : "Jaspal Suri",
+    "profession" : "NA",
+    "country" : "United States",
+    "state" : "NA",
+    "city" : "NA"]
 /*:
  You suddenly decide to move to Cleveland. Update your city to Cleveland, your state to Ohio, and your country to USA.
  */
-// personalInformation["city", "state", "country"] = ("Cleveland", "Ohio", "USA")
 personalInformation["city"] = ("Cleveland")
 personalInformation["state"] = ("Ohio")
+// if I had "USA" listed as the country (instead of it spelled out), I could have compared values instead for the country with "==" to check for equality
 personalInformation["country"] = ("USA")
 /*:
  Given a dictionary in the above format, write a function that prints a given person's city and state.
  */
+
+// An if-else statement would have been shorter to write.
+// proving an external argument label, such as "ofPerson" would have been useful
 func cityAndState(_ person: [String : String]) {
     let name = "Jane Doe"
     guard let city = person["city"], let state = person["state"]
