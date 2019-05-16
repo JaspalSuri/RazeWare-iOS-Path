@@ -38,12 +38,21 @@ var players = ["Alice", "Bob", "Dan", "Eli", "Frank"]
 
 players.contains("Dan")
 players.firstIndex(of: "Dan")
+
+// alternative and more practical solution
+// uses optional binding in case the name is not available
+if let playerIndex = players.firstIndex(of: "Dan") {
+    print(playerIndex)
+}
 /*:
  Write a for-in loop that prints the players' names and scores.
  */
 players = ["Anna", "Brian", "Craig", "Dan", "Donna", "Eli", "Franklin"]
 let scores = [2, 2, 8, 6, 1, 2, 1]
+let favoriteSnacks = ["cheetos", "fritos", "doritos", "oreos", "waffers", "pretzels", "mixed nuts"]
 
-for (player, score) in (players, scores) {
-    print("\(player) had a score of \(score)")
+// since both arrays contain the same amount of items, you can leverage the index of one of them
+
+for (index, player) in players.enumerated() {
+    print("\(player) had a score of \(scores[index]) and enjoys \(favoriteSnacks[index]).")
 }
