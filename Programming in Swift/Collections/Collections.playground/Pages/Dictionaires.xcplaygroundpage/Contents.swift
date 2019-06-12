@@ -19,6 +19,7 @@ var namesAndPets = [
     "Goku" : "Flying Nimbus"
 ]
 // prints in a different order than the one the KVP (key-value pairs were entered in)
+// i.e. dictionaries do not index KVP's
 print(namesAndPets)
 
 // You can return values by providing the key
@@ -45,14 +46,17 @@ namesAndPets["Calvin"] = "Tiger"
 namesAndPets["Goku"] = nil
 print(namesAndPets)
 
+// print out the characters and pets from the namesAndPets dictionary
 for (character, pet) in namesAndPets {
     print("\(character) has a pet named \(pet)")
 }
 
+// using a tuple to access the key, value, or both.
 for (name, _) in namesAndPets {
     print(name)
 }
 
+// directly access the values (or keys)
 for pet in namesAndPets.values {
     print(pet)
 }

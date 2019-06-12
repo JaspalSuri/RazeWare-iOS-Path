@@ -51,10 +51,8 @@ personalInformation["country"] = ("USA")
 /*:
  Given a dictionary in the above format, write a function that prints a given person's city and state.
  */
-
-// An if-else statement would have been shorter to write.
-// proving an external argument label, such as "ofPerson" would have been useful
-func cityAndState(_ person: [String : String]) {
+// Less code would have been written if an if-else statement was used in place of the guard statement
+func cityAndState(ofPerson person: [String : String]) {
     let name = "Jane Doe"
     guard let city = person["city"], let state = person["state"]
         else {
@@ -63,5 +61,5 @@ func cityAndState(_ person: [String : String]) {
     }
     print("\(name) lives in \(city), \(state).")
 }
-cityAndState(personalInformation)
-cityAndState(["city" : "Austen", "state" : "Texas"])
+cityAndState(ofPerson: personalInformation)
+cityAndState(ofPerson: ["city" : "Austen", "state" : "Texas"])
