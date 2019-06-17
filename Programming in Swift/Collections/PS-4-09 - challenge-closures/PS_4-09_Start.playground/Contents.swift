@@ -36,9 +36,15 @@
  */
 
 
-// TODO: Write solution here
-
-
+// Attempt
+let names = ["name1", "name2", "name3", "name4"]
+let combinedNames = names.reduce("", +)
+// Solution
+let names1 = ["Billy", "Bob", "Joe", "Jill"]
+let allNames = names1.reduce("") { result, name in
+print (result + " " + name)
+    return result + " " + name
+}
 /*:
  Using the same `names` array, first filter the array to contain only names which have more than four characters in them, and then create the same concatenation of names as in the above exercise. (Hint: you can chain these operations together.)
  */
