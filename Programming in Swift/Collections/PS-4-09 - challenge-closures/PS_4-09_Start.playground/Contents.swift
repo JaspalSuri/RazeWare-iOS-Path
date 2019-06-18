@@ -72,4 +72,14 @@ let children2 = namesAndAges.filter {
  */
 
 
-// TODO: Write solution here
+// Attempt for Children
+let childrenName = children2.map { nameAndAge in
+    return nameAndAge.key
+}
+// Solution for Adults - I wasn't sure what they meant by "filter out"
+let adults = namesAndAges.filter {
+    $0.value >= 19
+}
+.map { nameAndAge in
+    return nameAndAge.key
+}
