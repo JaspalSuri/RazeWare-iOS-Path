@@ -33,11 +33,32 @@
  
  Write a struct that represents a pizza. Include toppings, size and any other option you’d want.
  */
+typealias Inches = Int
+
 struct Pizza {
-    var toppings: String
-    var size: Int
-    var crust: String
+    enum Topping {
+        case cheese
+        case pineapple
+        case japalenos
+    }
+    
+    enum Crust {
+        case thick
+        case thin
+        case pan
+    }
+    
+    let toppings: [Topping]
+    let size: Inches
+    let crust: Crust
 }
+
+let pizzaTopping: Pizza.Topping = .japalenos
+let pizza = Pizza(
+    toppings: [.cheese, .pineapple],
+    size: 32,
+    crust: .pan
+)
 //: Add a method to `Restaurant` that can tell you if its delivery area overlaps with another restaurant's.
 typealias Miles = Double
 
