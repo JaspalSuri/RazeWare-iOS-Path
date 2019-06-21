@@ -67,7 +67,9 @@ struct Location {
   let y: Miles
   
   func getDistance(_ location: Location) -> Miles {
-    return abs(x - location.x) + abs(y - location.y)
+    let x2 = location.x
+    let y2 = location.y
+    return abs(x - x2) + abs(y - y2)
   }
 }
 
@@ -76,11 +78,15 @@ struct Restaurant {
   var deliveryDistance: Miles
   
   func willDeliver(to location: Location) -> Bool {
-    return self.location.getDistance(location) <= deliveryDistance
+    let requestedDeliveryDistance = self.location.getDistance(location)
+    return requestedDeliveryDistance <= deliveryDistance
   }
     
     func deliveryAreaOverlaps(restaurant: Restaurant) -> Bool {
-        return location.getDistance(restaurant.location) <= deliveryDistance + restaurant.deliveryDistance
+        let deliveryDistance2 = restaurant.deliveryDistance
+        let restaurantLocationsDifference = location.getDistance(restaurant.location)
+        let combinedDeliveryDistance = deliveryDistance + deliveryDistance2
+        return restaurantLocationsDifference <= combinedDeliveryDistance
     }
 }
 //: Test if these two restaurants' delivery areas overlap. They should not!
